@@ -1,0 +1,26 @@
+pkgname=chromium-pepper-flash
+pkgdesc="Google Chrome's Pepper Flash plugin for Chromium"
+url="http://www.google.com/chrome"
+license=('custom')
+
+_chrome_ver=45.0.2454.85-1
+pkgver=18.0.0.233
+pkgrel=1
+
+conflicts=('chromium-pepper-flash-dev')
+provides=('pepper-flash')
+
+arch=('x86_64')
+source=("${pkgname}-license.html::https://www.google.com/chrome/intl/en/eula_text.html")
+source_x86_64=("https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-${_chrome_ver}.x86_64.rpm")
+sha256sums=('b35811bb330576631e64f7885c66720e0be4ca81afb04328b3a0f288a708e37f')
+sha256sums_x86_64=('b2db49838ab278e25180e0424e0841cf33b0c7a3cd7264c50e59cdb03aaffdb6')
+
+package() {
+    # create required directories
+    install -d "${pkgdir}"/usr/lib/PepperFlash
+    # copy required files
+    install -m 644 "${srcdir}"/opt/google/chrome/PepperFlash/* "${pkgdir}"/usr/lib/PepperFlash
+    # copy license
+    install -Dm 644 "${srcdir}"/${pkgname}-license.html "${pkgdir}"/usr/share/licenses/${pkgname}/license.html
+}

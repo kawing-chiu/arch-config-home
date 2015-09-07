@@ -1,0 +1,25 @@
+hardstatus alwayslastline
+hardstatus string '%0`%42=%D %M %d %C %A%=%l'
+
+backtick 0 30 30 sh -c 'screen -ls | egrep -o "$PPID[^[:space:]]*"'
+
+escape ^a^a
+bind o other
+
+vbell off
+startup_message off
+
+autodetach on
+
+defscrollback 10000
+
+
+# change some stupid/dangerous key bindings
+bind k
+bind ^k
+bind ^\
+bind \
+bind ^h
+
+bind K kill
+

@@ -1,0 +1,22 @@
+[global_config]
+  enabled_plugins = ,
+  suppress_multiple_term_dialog = True
+[keybindings]
+  go_next = None
+  next_tab = <Primary><Shift>n
+  go_prev = None
+  prev_tab = <Primary><Shift>p
+[profiles]
+  [[default]]
+    use_system_font = False
+    font = WenQuanYi Micro Hei Mono 14
+    background_image = None
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
