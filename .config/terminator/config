@@ -1,6 +1,7 @@
 [global_config]
   enabled_plugins = ,
   suppress_multiple_term_dialog = True
+  inactive_color_offset = 0.86
 [keybindings]
   go_next = None
   next_tab = <Primary><Shift>n
