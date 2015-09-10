@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 
-export PATH="~/.local/bin:$PATH"
+export PATH="~/.local/bin:/opt/scripts:$PATH"
 
 # aliases
 alias aw='startx ~/.xinitrc awesome'
