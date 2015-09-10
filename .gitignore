@@ -3,6 +3,7 @@
 /.ssh/control_socks/*
 /.config/*
 /opt/*
+/opt/pkgbuilds/**/*
 
 !/.gitignore
 
@@ -20,4 +21,6 @@
 !/.config/awesome/
 
 !/opt/
+!/opt/pkgbuilds/
 !/opt/pkgbuilds/**/PKGBUILD
+!/opt/pkgbuilds/**/*.INSTALL
