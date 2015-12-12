@@ -1,0 +1,32 @@
+# don't forget to add the user to the postgres group
+# also, use loginctl enable-linger <user> to let the
+# user services run automatically on boot
+[Unit]
+Description=PostgreSQL database server
+After=network.target
+
+[Service]
+Type=forking
+TimeoutSec=120
+
+SyslogIdentifier=finance-db
+PIDFile=/home/statistician/db/finance/postmaster.pid
+
+Environment=PGROOT=/home/statistician/db/finance
+
+#ExecStartPre=/usr/bin/postgresql-check-db-dir ${PGROOT}
+ExecStart=/usr/bin/pg_ctl -s -D ${PGROOT} start -w -t 120
+ExecReload=/usr/bin/pg_ctl -s -D ${PGROOT} reload
+ExecStop=/usr/bin/pg_ctl -s -D ${PGROOT} stop -m fast
+
+# Due to PostgreSQL's use of shared memory, OOM killer is often overzealous in
+# killing Postgres, so adjust it downward
+OOMScoreAdjust=-200
+
+# Additional security-related features
+PrivateTmp=true
+ProtectSystem=full
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

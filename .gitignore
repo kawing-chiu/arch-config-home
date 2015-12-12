@@ -1,3 +1,5 @@
+*.swp
+
 /*
 /.ssh/*
 /.ssh/control_socks/*
@@ -20,6 +22,7 @@
 !/.config/
 !/.config/terminator/
 !/.config/awesome/
+!/.config/systemd/
 
 !/opt/
 !/opt/pkgbuilds/

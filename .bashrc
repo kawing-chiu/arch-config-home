@@ -24,4 +24,9 @@ alias Ctags='ctags --langmap="C++:+." --C++-kinds="+p" --fields="+iaS" --extra="
 alias Gcc='gcc -ggdb3 -Wall -Wextra -std=gnu99 -o test'
 alias G++='g++ -ggdb3 -Wall -Wextra -std=c++11 -o test -pthread'
 
+# cnpm
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc"
 
