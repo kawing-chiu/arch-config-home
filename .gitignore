@@ -5,7 +5,7 @@
 /.ssh/control_socks/*
 /.config/*
 /opt/*
-/opt/pkgbuilds/**/*
+/opt/pkgbuilds/*/*
 
 !/.gitignore
 
@@ -26,5 +26,5 @@
 
 !/opt/
 !/opt/pkgbuilds/
-!/opt/pkgbuilds/**/PKGBUILD
-!/opt/pkgbuilds/**/*.INSTALL
+!/opt/pkgbuilds/*/PKGBUILD
+!/opt/pkgbuilds/*/*.INSTALL
