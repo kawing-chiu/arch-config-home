@@ -13,6 +13,7 @@
 !/.bash_profile
 !/.xinitrc
 !/.screenrc
+!/.npmrc
 
 !/.Renviron
 !/.Rprofile
