@@ -11,6 +11,17 @@ PS1='[\u@\h \W]\$ '
 ###########
 
 #####
+# functions
+debug () {
+    export FRONTEND_DEBUG="on"
+    export BACKEND_DEBUG="on"
+}
+no_debug () {
+    unset FRONTEND_DEBUG
+    unset BACKEND_DEBUG
+}
+
+#####
 # aliases
 #
 alias aw='startx ~/.xinitrc awesome'
