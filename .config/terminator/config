@@ -21,4 +21,5 @@
   [[default]]
     background_image = None
     font = WenQuanYi Micro Hei Mono 14
+    scrollback_lines = 50000
     use_system_font = False
