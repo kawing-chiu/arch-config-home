@@ -28,7 +28,10 @@
 !/.config/awesome/
 !/.config/systemd/
 
+!/.weinre/
+
 !/opt/
 !/opt/pkgbuilds/
 !/opt/pkgbuilds/*/PKGBUILD
 !/opt/pkgbuilds/*/*.INSTALL
+
