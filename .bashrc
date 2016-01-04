@@ -20,6 +20,12 @@ no_debug () {
     unset FRONTEND_DEBUG
     unset BACKEND_DEBUG
 }
+use_weinre () {
+    export WEINRE_ADDR="http://192.168.1.50:3030/target/target-script-min.js#test"
+}
+no_weinre () {
+    unset WEINRE_ADDR
+}
 
 #####
 # aliases
