@@ -1,11 +1,12 @@
 *.swp
 
-/*
-/.ssh/*
-/.ssh/control_socks/*
-/.config/*
-/opt/*
-/opt/pkgbuilds/*/*
+/**/*
+#/*
+#/.ssh/*
+#/.ssh/control_socks/*
+#/.config/*
+#/opt/*
+#/opt/pkgbuilds/*/*
 
 !/.gitignore
 
@@ -18,20 +19,21 @@
 !/.Renviron
 !/.Rprofile
 
-!/.ssh/
+#!/.ssh/
 !/.ssh/config
-!/.ssh/control_socks/
+#!/.ssh/control_socks/
 !/.ssh/control_socks/touch
 
-!/.config/
-!/.config/terminator/
-!/.config/awesome/
-!/.config/systemd/
+#!/.config/
+!/.config/terminator/config
+!/.config/systemd/user/**/*
+!/.config/awesome/**/*
 
-!/.weinre/
+!/.weinre/server.properties
 
-!/opt/
-!/opt/pkgbuilds/
+#!/opt/
+#!/opt/pkgbuilds/
 !/opt/pkgbuilds/*/PKGBUILD
 !/opt/pkgbuilds/*/*.INSTALL
 
+!/.ipython/profile_default/ipython_config.py
