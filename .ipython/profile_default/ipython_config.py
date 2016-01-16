@@ -49,7 +49,13 @@ c.InteractiveShellApp.extensions = ['autoreload']
 
 # lines of code to run at IPython startup.
 # c.InteractiveShellApp.exec_lines = traitlets.Undefined
-c.InteractiveShellApp.exec_lines = ['%autoreload 1']
+c.InteractiveShellApp.exec_lines = [
+    '%autoreload 1',
+    'import numpy as np',
+    'import pandas as pd',
+    'import matplotlib as mpl',
+    'import matplotlib.pyplot as plt',
+]
 
 # Execute the given command string.
 # c.InteractiveShellApp.code_to_run = ''
