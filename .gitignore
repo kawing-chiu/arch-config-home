@@ -15,6 +15,7 @@
 !/.xinitrc
 !/.screenrc
 !/.npmrc
+!/.sqliterc
 
 !/.Renviron
 !/.Rprofile
