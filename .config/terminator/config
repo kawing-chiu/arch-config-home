@@ -3,6 +3,7 @@
   inactive_color_offset = 0.86
   suppress_multiple_term_dialog = True
 [keybindings]
+  close_term = None
   go_next = None
   go_prev = None
   next_tab = <Primary><Shift>n

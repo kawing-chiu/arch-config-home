@@ -25,7 +25,10 @@
 #!/.ssh/control_socks/
 !/.ssh/control_socks/touch
 
-#!/.config/
+!/.config/
+!/.config/fcitx/
+!/.config/fcitx/config
+!/.config/fcitx/profile
 !/.config/terminator/config
 !/.config/systemd/user/**/*
 !/.config/awesome/**/*
