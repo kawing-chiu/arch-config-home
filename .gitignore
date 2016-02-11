@@ -29,6 +29,8 @@
 !/.config/fcitx/
 !/.config/fcitx/config
 !/.config/fcitx/profile
+!/.config/fcitx/conf/
+!/.config/fcitx/conf/fcitx-sunpinyin.config
 !/.config/terminator/config
 !/.config/systemd/user/**/*
 !/.config/awesome/**/*
