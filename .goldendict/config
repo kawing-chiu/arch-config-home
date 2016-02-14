@@ -107,7 +107,7 @@
    <user></user>
    <password></password>
   </proxyserver>
-  <checkForNewReleases>1</checkForNewReleases>
+  <checkForNewReleases>0</checkForNewReleases>
   <disallowContentFromOtherSites>0</disallowContentFromOtherSites>
   <enableWebPlugins>0</enableWebPlugins>
   <hideGoldenDictHeader>0</hideGoldenDictHeader>
@@ -121,13 +121,13 @@
  <lastMainGroupId>0</lastMainGroupId>
  <lastPopupGroupId>0</lastPopupGroupId>
  <popupWindowState>AAAA/wAAAAH9AAAAAAAAAg0AAAGTAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAQAAAAEAAAAaAGQAaQBjAHQAaQBvAG4AYQByAHkAQgBhAHIDAAAAAP////8AAAAAAAAAAA==</popupWindowState>
- <popupWindowGeometry>AdnQywABAAAAAABRAAABxwAAAn0AAANZAAAAUQAAAccAAAJ9AAADWQAAAAAAAA==</popupWindowGeometry>
+ <popupWindowGeometry>AdnQywABAAAAAAGrAAABkgAAA9cAAAMkAAABqwAAAZIAAAPXAAADJAAAAAAAAA==</popupWindowGeometry>
  <pinPopupWindow>0</pinPopupWindow>
  <mainWindowState>AAAA/wAAAAH9AAAAAgAAAAAAAAAAAAAAAPwCAAAAAfsAAAAUAHMAZQBhAHIAYwBoAFAAYQBuAGUAAAAAAP////8AAACCAP///wAAAAEAAAFJAAADq/wCAAAAAvsAAAASAGQAaQBjAHQAcwBQAGEAbgBlAQAAADsAAAHNAAAAXQD////7AAAAFgBoAGkAcwB0AG8AcgB5AFAAYQBuAGUBAAACDgAAAdgAAABdAP///wAABi8AAAOrAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAUAG4AYQB2AFQAbwBvAGwAYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABoAZABpAGMAdABpAG8AbgBhAHIAeQBCAGEAcgEAAAHu/////wAAAAAAAAAA</mainWindowState>
- <mainWindowGeometry>AdnQywABAAAAAAABAAAAHAAAB34AAAQBAAAAAQAAABwAAAd+AAAEAQAAAAAAAA==</mainWindowGeometry>
+ <mainWindowGeometry>AdnQywABAAAAAAAAAAAAAAAAB38AAAQCAAAAAQAAABwAAAd+AAAEAQAAAAAAAA==</mainWindowGeometry>
  <dictInfoGeometry>AdnQywABAAAAAAKUAAABHAAABOsAAAKrAAAClAAAARwAAATrAAACqwAAAAAAAA==</dictInfoGeometry>
  <inspectorGeometry></inspectorGeometry>
- <timeForNewReleaseCheck>2016-02-12T22:21:14</timeForNewReleaseCheck>
+ <timeForNewReleaseCheck>2016-02-14T22:21:15</timeForNewReleaseCheck>
  <skippedRelease></skippedRelease>
  <showingDictBarNames>0</showingDictBarNames>
  <usingSmallIconsInToolbars>0</usingSmallIconsInToolbars>
