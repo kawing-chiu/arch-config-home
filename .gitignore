@@ -26,6 +26,8 @@
 !/.ssh/control_socks/touch
 
 !/.config/
+!/.config/dconf/
+!/.config/dconf/user
 !/.config/fcitx/
 !/.config/fcitx/config
 !/.config/fcitx/profile
@@ -34,6 +36,8 @@
 !/.config/terminator/config
 !/.config/systemd/user/**/*
 !/.config/awesome/**/*
+!/.config/autostart/
+!/.config/autostart/*
 
 !/.weinre/server.properties
 
