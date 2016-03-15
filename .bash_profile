@@ -6,7 +6,7 @@
 
 ###########
 
-export PATH="~/.local/bin:/opt/scripts:$PATH"
+export PATH="~/.local/bin:~/opt/scripts:/opt/scripts:$PATH"
 
 # for web dev
 export FRONTEND_DEBUG="on"
