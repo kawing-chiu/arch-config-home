@@ -15,11 +15,14 @@ defscrollback 10000
 
 
 # change some stupid/dangerous key bindings
+# kill
 bind k
 bind ^k
-bind ^\
-bind \
-bind ^h
-
 bind K kill
+# quit(kill all)
+#bind \
+
+# split vertically
+bind ^v eval "split -v" "focus" "screen"
+
 
