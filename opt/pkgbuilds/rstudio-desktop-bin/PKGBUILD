@@ -12,90 +12,85 @@ print(cbind(links,md5sums))
 _EOF_
 
 pkgname=rstudio-desktop-bin
-pkgver=0.99.489
+pkgver=0.99.893
 pkgrel=1
 pkgdesc="A new integrated development environment (IDE) for R (binary version from RStudio official website)"
 arch=('i686' 'x86_64')
 license=('GPL')
 url="http://www.rstudio.org/"
-depends=('r' 'gstreamer0.10-base' 'hicolor-icon-theme' 'libxcomposite' 'libxslt' 'shared-mime-info' 'libxrandr' 'gtk2')
+depends=('r' 'gstreamer0.10-base' 'hicolor-icon-theme' 'libxcomposite' 'libxslt' 'shared-mime-info' 'libxrandr' 'pandoc' 'pandoc-citeproc')
 makedepends=('patchelf')
-#'qt5-imageformats' 'qt5-webkit'
 conflicts=('rstudio-desktop' 'rstudio-desktop-git' 'rstudio-desktop-preview-bin')
 provides=("rstudio-desktop=${pkgver}")
 options=(!strip)
 
 
-_x86md5=1bf2997d91b6eaf0b483fbc52cca29b5
-_x64md5=ed089d88cc2e5901e311c66f7b1ada8b
+_x86md5=602be348a65af48dcacf7b55dca083cf
+_x64md5=dd8679eb9c3d13d922e2793b14b9c786
 
 case "$CARCH" in
-    'i686')
-        _arch=i386
-        _archx=
-        md5sums=($_x86md5)
-        ;;
-    'x86_64')
-        _arch=amd64
-        _archx=64
-        md5sums=($_x64md5)
-        ;;
-esac        
+	'i686')
+		_arch=i386
+    _archx=
+		md5sums=($_x86md5)
+		;;
+	'x86_64')
+		_arch=amd64
+    _archx=64
+		md5sums=($_x64md5)
+		;;
+esac    
 source=("http://download1.rstudio.org/rstudio-${pkgver}-${_arch}.deb")
-install="$pkgname".INSTALL
+install="$pkgname".install
 
 package() {
 
-    shopt -s extglob
+	shopt -s extglob
 
-    msg "Converting debian package..."
+  msg "Converting debian package..."
 
-    cd "$srcdir"
-    tar zxpf data.tar.gz -C "$pkgdir"
-    install -dm755 "$pkgdir/usr/bin"
+  cd "$srcdir"
+  tar zxpf data.tar.gz -C "$pkgdir"
+  install -dm755 "$pkgdir/usr/bin"
 
-    #cd "$pkgdir/usr/lib/rstudio/bin"
-    #ls lib*.so.* | grep -v libedit | grep -v libtinfo | tr \\n \\0 |xargs -0 rm
-    #rm -rf plugins
+  cd "$pkgdir/usr/lib/rstudio/bin"
+  ln -sf /usr/lib/libncursesw.so.6 libtinfo.so.5
+  ln -sf /usr/lib/libedit.so.0  libedit.so.2
 
-    #cd "$pkgdir/usr/lib/rstudio/bin/rsclang"
-    #ln -sf /usr/lib/libclang.so ./
+  cd "$pkgdir/usr/lib/rstudio/bin/rsclang"
+  patchelf --set-rpath '$ORIGIN/..' libclang.so
 
-    cd "$pkgdir/usr/lib/rstudio/bin"
-    ln -sf /usr/lib/libncursesw.so.6 libtinfo.so.5
-    ln -sf /usr/lib/libedit.so.0    libedit.so.2
+  cd "$pkgdir/usr/lib/rstudio/bin/pandoc"
+  ln -sf /usr/bin/pandoc ./
+  ln -sf /usr/bin/pandoc-citeproc ./
 
-    cd "$pkgdir/usr/lib/rstudio/bin/rsclang"
-    patchelf --set-rpath '$ORIGIN/..' libclang.so
+  cd "$pkgdir/usr/lib/rstudio/bin/plugins"
+  ls */*.so | xargs -n1 patchelf --set-rpath '$ORIGIN/../..'
 
-    cd "$pkgdir/usr/lib/rstudio/bin/plugins"
-    ls */*.so | xargs -n1 patchelf --set-rpath '$ORIGIN/../..'
+  find "$pkgdir/usr" -type d -print0 | xargs -0 chmod 755
+  find "$pkgdir/usr" -type f -name '*.so.*' -print0 | xargs -0 chmod 644
 
-    find "$pkgdir/usr" -type d -print0 | xargs -0 chmod 755
-    find "$pkgdir/usr" -type f -name '*.so.*' -print0 | xargs -0 chmod 644
+  cd "$pkgdir/usr/lib/rstudio/bin"
+  ls libQt*.so.*| grep '\.[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}$'|
+  while read x;do
+    ln -sf "$x" "${x%.+([0-9]).+([0-9])}"
+  done
+  ls lib*.so.* | grep '\.so\.[0-9]\{1,\}\.[0-9]\{1,\}$'|
+  while read x;do
+    ln -sf "$x" "${x%.+([0-9])}"
+  done
 
-    cd "$pkgdir/usr/lib/rstudio/bin"
-    ls libQt*.so.* | grep '\.[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}$' |
-    while read x; do
-        ln -sf "$x" "${x%.+([0-9]).+([0-9])}"
-    done
-    ls lib*.so.* | grep '\.so\.[0-9]\{1,\}\.[0-9]\{1,\}$' |
-    while read x; do
-        ln -sf "$x" "${x%.+([0-9])}"
-    done
-
-    cd "$pkgdir/usr/bin"
-    #ln -s -f ../lib/rstudio/bin/rstudio rstudio-bin
-    echo '#!/bin/sh
+  cd "$pkgdir/usr/bin"
+  #ln -s -f ../lib/rstudio/bin/rstudio rstudio-bin
+  echo '#!/bin/sh
 export QT_DIR=/usr/lib/rstudio/bin
 export QT_PLUGIN_PATH=$QT_DIR/plugins
 export QT_QPA_PLATFORM_PLUGIN_PATH=$QT_PLUGIN_PATH/platforms
 export KDEDIRS=/usr
-exec /usr/lib/rstudio/bin/rstudio
+exec /usr/lib/rstudio/bin/rstudio "$@"
 ' > "$pkgdir/usr/bin/rstudio-bin"
-    chmod 755 "$pkgdir/usr/bin/rstudio-bin"
+  chmod 755 "$pkgdir/usr/bin/rstudio-bin"
 
-    sed -i 's|/usr/lib/rstudio/bin/rstudio|/usr/bin/rstudio-bin|' "$pkgdir/usr/share/applications/rstudio.desktop"
+  sed -i 's|/usr/lib/rstudio/bin/rstudio|/usr/bin/rstudio-bin|' "$pkgdir/usr/share/applications/rstudio.desktop"
 }
-
-# vim: ft=sh expandtab
+# vim:ft=sh tabstop=2 expandtab
