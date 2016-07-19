@@ -16,6 +16,7 @@
 !/.screenrc
 !/.npmrc
 !/.sqliterc
+!/.ackrc
 
 !/.Renviron
 !/.Rprofile
