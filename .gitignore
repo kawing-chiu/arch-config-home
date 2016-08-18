@@ -44,6 +44,7 @@
 
 !/opt/
 !/opt/pkgbuilds/
+!/opt/pkgbuilds/*
 !/opt/pkgbuilds/*/PKGBUILD
 !/opt/pkgbuilds/*/*.INSTALL
 !/opt/pkgbuilds/chromium-pepper-flash/
