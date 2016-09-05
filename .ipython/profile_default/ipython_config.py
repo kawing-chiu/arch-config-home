@@ -55,6 +55,9 @@ c.InteractiveShellApp.exec_lines = [
     'import pandas as pd',
     'import matplotlib as mpl',
     'import matplotlib.pyplot as plt',
+    'pylab --no-import-all',
+    'from IPython import get_ipython',
+    'ip = get_ipython()',
 ]
 
 # Execute the given command string.
