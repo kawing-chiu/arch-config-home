@@ -58,6 +58,7 @@ c.InteractiveShellApp.exec_lines = [
     'pylab --no-import-all',
     'from IPython import get_ipython',
     'ip = get_ipython()',
+    'pd.options.display.max_rows = 12',
 ]
 
 # Execute the given command string.
