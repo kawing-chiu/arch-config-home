@@ -185,7 +185,7 @@ c.InteractiveShellApp.exec_lines = [
 # c.InteractiveShell.readline_parse_and_bind = traitlets.Undefined
 
 # 
-# c.InteractiveShell.history_length = 10000
+c.InteractiveShell.history_length = 500000
 
 # 
 # c.InteractiveShell.wildcards_case_sensitive = True
