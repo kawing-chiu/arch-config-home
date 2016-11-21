@@ -24,4 +24,5 @@ session=${1-mate}
 case $session in
     awesome) exec awesome;;
     mate) exec mate-session;;
+    i3) exec i3;;
 esac
