@@ -185,7 +185,7 @@ c.InteractiveShellApp.exec_lines = [
 # c.InteractiveShell.readline_parse_and_bind = traitlets.Undefined
 
 # 
-c.InteractiveShell.history_length = 500000
+c.InteractiveShell.history_length = 800000
 
 # 
 # c.InteractiveShell.wildcards_case_sensitive = True
@@ -200,7 +200,7 @@ c.InteractiveShell.history_length = 500000
 
 # The number of saved history entries to be loaded into the readline buffer at
 # startup.
-# c.InteractiveShell.history_load_length = 1000
+c.InteractiveShell.history_load_length = 800000
 
 # Start logging to the default log file in overwrite mode. Use `logappend` to
 # specify a log file to **append** logs to.
