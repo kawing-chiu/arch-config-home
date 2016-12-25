@@ -52,6 +52,8 @@
 !/opt/pkgbuilds/chromium-pepper-flash/
 !/opt/pkgbuilds/chromium-pepper-flash/chromium-pepper-flash-*-x86_64.pkg.tar.xz
 !/opt/pkgbuilds/chromium-pepper-flash/SwitchyOmega.crx
+!/opt/scripts/
+!/opt/scripts/*
 
 !/.ipython/profile_default/ipython_config.py
 
