@@ -4,7 +4,7 @@ Description=Synergy Server Daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/synergys --no-daemon --config %h/.synergy.conf
+ExecStart=/usr/bin/synergys --no-daemon --config %h/.synergy.conf -d NOTE
 Restart=on-failure
 
 [Install]
