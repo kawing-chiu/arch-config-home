@@ -51,11 +51,12 @@ c.InteractiveShellApp.extensions = ['autoreload']
 # c.InteractiveShellApp.exec_lines = traitlets.Undefined
 c.InteractiveShellApp.exec_lines = [
     '%autoreload 2',
+    #'%pylab --no-import-all qt5',
+    '%matplotlib qt5',
     'import numpy as np',
     'import pandas as pd',
     'import matplotlib as mpl',
     'import matplotlib.pyplot as plt',
-    'pylab --no-import-all',
     'from IPython import get_ipython',
     'ip = get_ipython()',
     'pd.options.display.max_rows = 12',
