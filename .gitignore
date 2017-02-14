@@ -9,6 +9,7 @@
 #/opt/pkgbuilds/*/*
 
 !/.gitignore
+!/.gitignore_global
 
 !/.bashrc
 !/.bash_profile
@@ -30,7 +31,7 @@
 !/.config/
 !/.config/fcitx/
 !/.config/fcitx/config
-!/.config/fcitx/profile
+#!/.config/fcitx/profile
 !/.config/fcitx/conf/
 !/.config/fcitx/conf/fcitx-sunpinyin.config
 !/.config/terminator/config
