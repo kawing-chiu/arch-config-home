@@ -59,6 +59,8 @@ c.InteractiveShellApp.exec_lines = [
     'import matplotlib.pyplot as plt',
     'from IPython import get_ipython',
     'ip = get_ipython()',
+    'import psutil as ps',
+    'p = ps.Process()',
     'pd.options.display.max_rows = 12',
 ]
 
