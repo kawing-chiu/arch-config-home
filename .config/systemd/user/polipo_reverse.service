@@ -1,0 +1,11 @@
+[Unit]
+Description=Polipo Proxy Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/polipo -c ~/.polipo/reverse_http.config
+#User=polipo
+#PrivateDevices=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -63,5 +63,8 @@
 !/.ipython/profile_default/
 !/.ipython/profile_default/ipython_config.py
 
+!/.polipo/
+!/.polipo/reverse_http.config
+
 #!/.goldendict/
 #!/.goldendict/config
