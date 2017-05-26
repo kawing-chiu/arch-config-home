@@ -46,3 +46,4 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --cache=$HOME/.npm/.cache/cnpm \
 --disturl=https://npm.taobao.org/dist"
 
+alias cconda-activate="source ~/opt/miniconda3/bin/activate"
