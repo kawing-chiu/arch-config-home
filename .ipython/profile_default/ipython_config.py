@@ -50,7 +50,7 @@ c.InteractiveShellApp.extensions = ['autoreload']
 # lines of code to run at IPython startup.
 # c.InteractiveShellApp.exec_lines = traitlets.Undefined
 c.InteractiveShellApp.exec_lines = [
-    '%autoreload 2',
+    '%autoreload 1',
     #'%pylab --no-import-all qt5',
     '%matplotlib qt5',
     'import numpy as np',
