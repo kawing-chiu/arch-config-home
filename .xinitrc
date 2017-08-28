@@ -22,8 +22,9 @@ export XMODIFIERS=@im=fcitx
 
 session=${1-mate}
 case $session in
-    awesome) exec awesome;;
     mate) exec mate-session;;
+    kde) exec startkde;;
+    awesome) exec awesome;;
     i3) exec i3;;
     cinnamon) exec cinnamon-session;;
 esac
