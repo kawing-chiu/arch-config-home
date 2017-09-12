@@ -1,0 +1,11 @@
+[Unit]
+Description=Airflow Scheduler
+After=network.target
+
+[Service]
+ExecStart=%h/.local/bin/airflow scheduler
+# simple is the default type
+#Type=simple
+
+[Install]
+WantedBy=multi-user.target
