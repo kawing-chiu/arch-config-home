@@ -46,6 +46,8 @@
 !/.config/i3/config
 #!/.config/dconf/
 #!/.config/dconf/user
+!/.config/environment.d
+!/.config/environment.d/*
 
 !/.weinre/server.properties
 
