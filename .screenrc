@@ -1,3 +1,12 @@
+# Usage:
+#   - create session:
+#       sc -S <session_name>
+#   - list sessions:
+#       sc -ls
+#   - attach to session:
+#       sc -x <session_name>
+#   - detach within session:
+#       C-a d
 hardstatus alwayslastline
 hardstatus string '%0`%42=%D %M %d %C %A%=%l'
 
