@@ -49,6 +49,8 @@
 !/.config/environment.d
 !/.config/environment.d/*
 
+!/.airflow-env
+
 !/.weinre/server.properties
 
 !/opt/

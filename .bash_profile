@@ -17,5 +17,8 @@ NPM_PKGS="$HOME/.npm-packages"
 export PATH="$NPM_PKGS/bin:$PATH"
 export NODE_PATH="$NPM_PKGS/lib/node_modules:$NODE_PATH"
 
-# airflow
-export AIRFLOW_HOME="$HOME/.airflow"
+# airflow, the env file is shared with systemd
+set -a
+source "$HOME/.airflow-env"
+set +a
+

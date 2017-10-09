@@ -1,12 +1,15 @@
 [Unit]
 Description=Airflow Scheduler
-After=network.target
+After=network.target postgresql.service
 
 [Service]
-ExecStart=%h/.local/bin/airflow scheduler
+EnvironmentFile=%h/.airflow-env
+ExecStart=%h/.local/bin/airflow scheduler -n 8
 # simple is the default type
 #Type=simple
 KillMode=mixed
+Restart=always
+RestartSec=10s
 
 [Install]
 WantedBy=default.target

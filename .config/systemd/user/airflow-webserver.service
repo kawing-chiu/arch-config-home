@@ -1,11 +1,13 @@
 [Unit]
 Description=Airflow Webserver
-After=network.target
+After=network.target postgresql.service
 
 [Service]
+EnvironmentFile=%h/.airflow-env
 ExecStart=%h/.local/bin/airflow webserver -p 8080
 # simple is the default type
 #Type=simple
+PrivateTmp=true
 
 [Install]
 WantedBy=default.target
