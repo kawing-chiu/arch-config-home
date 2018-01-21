@@ -59,7 +59,7 @@ c.InteractiveShellApp.exec_lines = [
     'import matplotlib.pyplot as plt',
     'from IPython import get_ipython',
     'ip = get_ipython()',
-    'import hunter as h',
+    'import hunter as h; from hunter import Q',
     'pd.options.display.max_rows = 12',
 ]
 
