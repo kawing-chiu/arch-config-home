@@ -35,7 +35,10 @@
 
 # A list of dotted module names of IPython extensions to load.
 # c.InteractiveShellApp.extensions = traitlets.Undefined
-c.InteractiveShellApp.extensions = ['autoreload']
+c.InteractiveShellApp.extensions = [
+    'autoreload',
+    'line_profiler',
+]
 
 # Reraise exceptions encountered loading IPython extensions?
 # c.InteractiveShellApp.reraise_ipython_extension_failures = False
