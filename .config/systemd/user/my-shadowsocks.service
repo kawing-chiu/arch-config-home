@@ -7,5 +7,5 @@ Type=simple
 ExecStart=/usr/bin/sslocal -c %h/.ss_config
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
 
