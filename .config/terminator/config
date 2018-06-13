@@ -22,5 +22,5 @@
   [[default]]
     cursor_color = "#aaaaaa"
     font = WenQuanYi Micro Hei Mono 14
-    scrollback_lines = 50000
+    scrollback_lines = 100000
     use_system_font = False

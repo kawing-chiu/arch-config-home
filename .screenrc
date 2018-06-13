@@ -8,12 +8,11 @@
 #   - detach within session:
 #       C-a d
 hardstatus alwayslastline
-hardstatus string '%0`%42=%D %M %d %C %A%=%l'
+hardstatus string '%0`:%n%40=%D %M %d %C %A%=%l'
 
 backtick 0 30 30 sh -c 'screen -ls | egrep -o "$PPID[^[:space:]]*"'
 
 escape ^a^a
-bind o other
 
 vbell off
 startup_message off
@@ -21,17 +20,5 @@ startup_message off
 autodetach on
 
 defscrollback 10000
-
-
-# change some stupid/dangerous key bindings
-# kill
-bind k
-bind ^k
-bind K kill
-# quit(kill all)
-#bind \
-
-# split vertically
-bind ^v eval "split -v" "focus" "screen"
 
 

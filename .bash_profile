@@ -7,6 +7,8 @@
 ###########
 
 export PATH="$HOME/.local/bin:$HOME/opt/scripts:/opt/scripts:$PATH"
+# add go's path
+export PATH="$PATH:$HOME/go/bin"
 
 # for web dev
 export FRONTEND_DEBUG="on"
