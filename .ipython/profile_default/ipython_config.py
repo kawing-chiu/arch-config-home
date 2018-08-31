@@ -54,7 +54,7 @@ c.InteractiveShellApp.extensions = [
 # c.InteractiveShellApp.exec_lines = traitlets.Undefined
 c.InteractiveShellApp.exec_lines = [
     '%autoreload 1',
-    #'%pylab --no-import-all qt5',
+    # '%pylab --no-import-all qt5',
     '%matplotlib qt5',
     'import numpy as np',
     'import pandas as pd',
@@ -62,7 +62,7 @@ c.InteractiveShellApp.exec_lines = [
     'import matplotlib.pyplot as plt',
     'from IPython import get_ipython',
     'ip = get_ipython()',
-    'import hunter as h; from hunter import Q',
+    # 'import hunter as h; from hunter import Q',
     'pd.options.display.max_rows = 12',
 ]
 
