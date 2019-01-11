@@ -4,11 +4,37 @@
 #   - list sessions:
 #       sc -ls
 #   - attach to session:
+#       sc -r <session_name>
 #       sc -x <session_name>
-#   - detach within session:
+#     -r only attach to detached session, -x can attach to a session multiple
+#     times (multi display mode)
+#
+#   * detach within session:
 #       C-a d
+#   * create a new window:
+#       C-a c
+#   * set current window's name (title):
+#       C-a A
+#   * show windows list in status line
+#       C-a w
+#   * show windows list full screen for selection
+#       C-a "
+#   * switch to previous window
+#       C-a C-p
+#   * switch to next window
+#       C-a C-n
+#   * send literal "C-a"
+#       C-a C-a
+#   * enter command-line mode (like vim's :)
+#       C-a :
+#     for example, C-a :title <title> is equivalent to C-a A
+#   * start copy mode, press SPACE, select, then press SPACE again to copy
+#       C-a [
+#     within copy mode, vim-like movement commands can be used
+#   * paste the copied content
+#       C-a ]
 hardstatus alwayslastline
-hardstatus string '%0`:%n%40=%D %M %d %C %A%=%l'
+hardstatus string '%0`:%n [%t]%40=%D %M %d %C %A%=%l'
 
 backtick 0 30 30 sh -c 'screen -ls | egrep -o "$PPID[^[:space:]]*"'
 
@@ -19,6 +45,6 @@ startup_message off
 
 autodetach on
 
-defscrollback 10000
+defscrollback 100000
 
 
