@@ -34,7 +34,7 @@
 #   * paste the copied content
 #       C-a ]
 hardstatus alwayslastline
-hardstatus string '%0`:%n [%t]%40=%D %M %d %C %A%=%l'
+hardstatus string '%0`:%n [%t]%43=%D %M %d %C %A%=%l'
 
 backtick 0 30 30 sh -c 'screen -ls | egrep -o "$PPID[^[:space:]]*"'
 

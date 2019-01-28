@@ -20,6 +20,8 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
+eval $(ssh-agent)
+
 session=${1-mate}
 case $session in
     mate) exec mate-session;;
