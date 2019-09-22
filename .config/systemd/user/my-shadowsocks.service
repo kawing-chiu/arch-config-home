@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/sslocal -c %h/.ss_config
+ExecStart=/usr/bin/ss-local -c %h/.ss_config
 
 [Install]
 WantedBy=default.target
