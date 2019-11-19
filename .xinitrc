@@ -25,7 +25,7 @@ eval $(ssh-agent)
 session=${1-mate}
 case $session in
     mate) exec mate-session;;
-    kde) exec startkde;;
+    kde) exec startplasma-x11;;
     awesome) exec awesome;;
     i3) exec i3;;
     cinnamon) exec cinnamon-session;;
