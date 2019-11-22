@@ -69,3 +69,8 @@ source_pypy_env () {
     source "$PYPY_ENV_DIR/$1/bin/activate"
 }
 
+
+if [ -d "$HOME/.asdf/" ]; then
+    . $HOME/.asdf/asdf.sh
+    . $HOME/.asdf/completions/asdf.bash
+fi
