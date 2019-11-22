@@ -1,3 +1,4 @@
 # run 'git config --global core.excludesfile ~/.gitignore_global' to use
 .vim-clang
+.*.vim
 __pycache__/

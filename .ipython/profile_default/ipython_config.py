@@ -37,7 +37,7 @@
 # c.InteractiveShellApp.extensions = traitlets.Undefined
 c.InteractiveShellApp.extensions = [
     'autoreload',
-    'line_profiler',
+    # 'line_profiler',
 ]
 
 # Reraise exceptions encountered loading IPython extensions?
