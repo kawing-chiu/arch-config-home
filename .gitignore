@@ -20,6 +20,7 @@
 !/.ackrc
 !/.synergy.conf
 !/.condarc
+!/.tmux.conf
 
 !/.Renviron
 !/.Rprofile

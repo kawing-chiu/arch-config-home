@@ -9,6 +9,8 @@
 export PATH="$HOME/.local/bin:$HOME/opt/scripts:/opt/scripts:$PATH"
 # add go's path
 export PATH="$PATH:$HOME/go/bin"
+# add poetry's path
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # for web dev
 export FRONTEND_DEBUG="on"
