@@ -33,6 +33,7 @@ no_weinre () {
 alias aw='startx ~/.xinitrc awesome'
 alias mate='startx ~/.xinitrc mate'
 alias kde='startx ~/.xinitrc kde'
+alias xfce='startx ~/.xinitrc xfce'
 
 alias Man='man -K -w --regex'
 # --langmap="C++:+." means also consider files with no extension as C++ files

@@ -29,4 +29,5 @@ case $session in
     awesome) exec awesome;;
     i3) exec i3;;
     cinnamon) exec cinnamon-session;;
+    xfce) exec startxfce4;;
 esac
